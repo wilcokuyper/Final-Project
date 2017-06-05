@@ -1,0 +1,30 @@
+{
+  "name": "final-project",
+  "version": "0.0.1",
+  "description": "Final Project for CS50 Course",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/will186/Final-Project.git"
+  },
+  "author": "Wilco Kuyper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/will186/Final-Project/issues"
+  },
+  "homepage": "https://github.com/will186/Final-Project#readme",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.6.1"
+  }
+}
