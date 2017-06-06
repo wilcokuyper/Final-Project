@@ -1,7 +1,14 @@
 import React from 'react';
+import Header from './Header';
+import AlbumList from './AlbumList';
 
 const Home = () => {
-  return <h1>Hello</h1>;
+  return (
+    <div>
+      <Header />
+      <AlbumList />
+    </div>
+  );
 };
 
 export default Home;

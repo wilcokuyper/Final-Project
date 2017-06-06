@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const webpack = require('webpack');
+//const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -8,8 +8,8 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name]-[chunkhash].js',
-    chunkFilename: '[name]-[chunkhash].js',
+    filename: 'bundle.js',
+    //chunkFilename: '[name]-[chunkhash].js',
   },
   module: {
     rules: [
@@ -21,11 +21,16 @@ module.exports = {
       {
         use: ['style-loader', 'css-loader'],
         test: /\.css$/
+      },
+      {
+        use: 'json-loader',
+        test: /\.json%/
       }
     ]
   },
   plugins: [
     // Extract vendor modules into a separate chunk
+    /*
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: ({ resource }) => /node_modules/.test(resource),
@@ -33,7 +38,7 @@ module.exports = {
 
     // Generate a chunk to be added to the html template
     new webpack.optimize.CommonsChunkPlugin('manifest'),
-
+    */
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })
