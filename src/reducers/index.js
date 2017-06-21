@@ -1,11 +1,9 @@
 import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
+import { reducer as form } from 'redux-form';
 
-import MovieReducer from './reducer_movies.js';
+import albums from './reducer_albums.js';
 
-const rootReducer = combineReducers({
-  movies: MovieReducer,
-  form: formReducer,
-});
-
-export default rootReducer;
+export default combineReducers({
+  albums,
+  form,
+})

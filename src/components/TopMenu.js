@@ -2,28 +2,25 @@ import React from 'react';
 
 const TopMenu = () => {
   return (
-    <nav className="navbar navbar-default navbar-static-top">
+    <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
       <div className="container">
 
-        <div className="navbar-header">
-          <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#mns-navbar-collapse" aria-expanded="false">
-            <span className="sr-only">Toggle navigation</span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-          </button>
-          <a className="navbar-brand" href="#">Movies & Soundtracks</a>
-        </div>
+        <button type="button" className="navbar-toggler navbar-toggler-right"
+                data-toggle="collapse" data-target="#mns-navbar-collapse">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+        <a className="navbar-brand" href="#">Movies & Soundtracks</a>
 
         <div className="collapse navbar-collapse" id="mns-navbar-collapse">
-          <ul className="nav navbar-nav">
-            <li><a href="#">Browse</a></li>
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            <li><a href="#">Register</a></li>
-            <li><a href="#">Log in</a></li>
-          </ul>
+          <div className="navbar-nav">
+            <a href="#" className="nav-item nav-link">Browse</a>
+          </div>
+          <div className="navbar-nav ml-auto">
+            <a href="#" className="nav-item nav-link">Register</a>
+            <a href="#" className="nav-item nav-link">Log in</a>
+          </div>
         </div>
+
       </div>
     </nav>
   )

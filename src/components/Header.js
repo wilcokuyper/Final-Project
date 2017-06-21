@@ -20,8 +20,7 @@ const Header = () => {
     <div className="mns-header" style={style}>
       <TopMenu />
       <div className="container">
-        <h1>Movies & Soundtracks</h1>
-        <p>Find the soundtrack for your favorite movies</p>
+        <h1 className="mt-5 mb-3">Find the soundtrack for your favorite movies</h1>
         <Searchbar placeholder={placeholderText[Math.floor((Math.random() * placeholderText.length))]} />
       </div>
     </div>
