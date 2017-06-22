@@ -10,7 +10,7 @@ class Searchbar extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmitForm}>
-        <div>
+        <div className="mb-3">
           <Field
             className="form-control"
             name="searchText"
