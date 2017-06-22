@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const TopMenu = () => {
   return (
@@ -10,15 +9,15 @@ const TopMenu = () => {
                 data-toggle="collapse" data-target="#mns-navbar-collapse">
             <span className="navbar-toggler-icon"></span>
         </button>
-        <Link to="/" className="navbar-brand">Movies & Soundtracks</Link>
+        <a className="navbar-brand" href="#">Movies & Soundtracks</a>
 
         <div className="collapse navbar-collapse" id="mns-navbar-collapse">
           <div className="navbar-nav">
-            <Link to="/browse" className="nav-item nav-link">Browse</Link>
+            <a href="#" className="nav-item nav-link">Browse</a>
           </div>
           <div className="navbar-nav ml-auto">
-            <Link to="/register" className="nav-item nav-link">Register</Link>
-            <Link to="login" className="nav-item nav-link">Log in</Link>
+            <a href="#" className="nav-item nav-link">Register</a>
+            <a href="#" className="nav-item nav-link">Log in</a>
           </div>
         </div>
 
