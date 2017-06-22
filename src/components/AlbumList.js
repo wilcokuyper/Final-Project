@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -18,6 +19,11 @@ class AlbumList extends Component {
       </div>
     )
   }
+}
+
+AlbumList.propTypes = {
+  albums:       PropTypes.array.IsRequired,
+  fetchAlbums:  PropTypes.func.IsRequired
 }
 
 const mapStateToProps = state => {
