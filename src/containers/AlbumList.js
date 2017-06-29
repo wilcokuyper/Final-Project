@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import Album from './Album';
+import Album from '../components/Album';
 
 class AlbumList extends Component {
   componentWillMount() {
@@ -22,13 +22,13 @@ class AlbumList extends Component {
 }
 
 AlbumList.propTypes = {
-  albums:       PropTypes.array.IsRequired,
-  fetchAlbums:  PropTypes.func.IsRequired
+  albums: PropTypes.array.isRequired,
+  fetchAlbums: PropTypes.func
 }
 
 const mapStateToProps = state => {
   return {
-    albums: state.albums
+    albums: state.albums,
   };
 }
 

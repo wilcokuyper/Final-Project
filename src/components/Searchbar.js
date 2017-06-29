@@ -1,32 +1,21 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { Field, reduxForm } from 'redux-form';
+import React from 'react';
+import { reduxForm, Field } from 'redux-form';
 
-class Searchbar extends Component {
-  onSubmitForm(e) {
-    e.preventDefault();
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.onSubmitForm}>
-        <div className="mb-3">
-          <Field
-            className="form-control"
-            name="searchText"
-            component="input"
-            type="text"
-            placeholder={this.props.placeholder}
-          />
-        </div>
-      </form>
-    );
-  }
+const Searchbar = ({ handleSubmit, onSubmit, placeholder }) => {
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="mb-3">
+        <Field
+          className="form-control"
+          name="searchText"
+          component="input"
+          type="text"
+          placeholder={placeholder}
+        />
+      </div>
+    </form>
+  );
 }
-
-Searchbar.propTypes = {
-  placeholder: PropTypes.string
-};
 
 export default reduxForm({
   form: 'search'
