@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 
 const Searchbar = ({ handleSubmit, onSubmit, placeholder }) => {
@@ -15,6 +16,12 @@ const Searchbar = ({ handleSubmit, onSubmit, placeholder }) => {
       </div>
     </form>
   );
+}
+
+Searchbar.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func,
+  placeholder: PropTypes.string
 }
 
 export default reduxForm({

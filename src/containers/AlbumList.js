@@ -12,10 +12,12 @@ class AlbumList extends Component {
 
   render() {
     return (
-      <div className="albumContainer container card-deck">
+      <div className="container">
+        <div className="row">
           { this.props.albums.map( album =>
             <Album key={ album.id } { ...album } />
           ) }
+        </div>
       </div>
     )
   }
